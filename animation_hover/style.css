@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(19, 19, 19);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+.poster {
+    display: block;
+    background-image: linear-gradient(royalblue, yellow);
+    background-color: darkorange;
+    height: 650px;
+    width: 1000px;
+    
+}
+
+a {
+    color: rgb(19, 19, 19);
+    padding-left: 100px;
+}
+
+div.grade {
+    display: block;
+    background-image: linear-gradient(yellow, royalblue);
+    margin-left: 1000px;
+    height: 100px;
+    width: 100px;
+    background-color: #ccc;
+    transition: 0.5s;
+}
+
+.grade:hover {
+    width: 300px;
+}
+
+#grade01 {
+    position: fixed;
+    margin-top: -650px;
+}
+
+#grade02 {
+    position: fixed;
+    margin-top: -550px;
+}
+
+#grade03 {
+    position: fixed;
+    margin-top: -450px;
+}
