@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surfce Areas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p id="validity"></p>
+
+    <div id="cube">
+        <h3>CUBE</h3>
+
+        <label for="edge">Edge: </label>
+        <input type="number" name="edge" id="edge">
+
+        <button onclick="csaofcube()">LA</button>
+        <button onclick="tsaofcube()">TSA</button>
+    </div>
+
+    <br><br>
+
+    <div id="cuboid">
+        <h3>CUBOID</h3>
+        
+        <label for="length">Length: </label>
+        <input type="number" name="length" id="length">
+        <label for="breadth">Breadth: </label>
+        <input type="number" name="breadth" id="breadth">
+        <label for="height">Height: </label>
+        <input type="number" name="height" id="height">
+
+        <button onclick="csaofcuboid()">LSA</button>
+        <button onclick="tsaofcuboid()">TSA</button>
+    </div>
+
+    <br><br>
+
+    <div id="sphere">
+        <h3>SPHERE</h3>
+
+        <label for="radius">Radius: </label>
+        <input type="number" name="radius" id="radius">
+
+        <button onclick="saofsphere()">SA</button>
+    </div>
+    <br>
+    <p name="ans" id="ans"></p>
+
+    <br><br>
+
+    <script>
+        var ans = document.getElementById('ans');
+        var validity = document.getElementById('validity');
+
+
+
+        //****************************CUBE*****************************//
+
+        function csaofcube() {
+            var edge = document.getElementById('edge');
+            var a = edge.value
+            if (a) {
+                ans.innerHTML = "CSA of the cube is " + 4 * a * a + " sq.units";
+            } else {
+                validity.innerHTML = "You've not entered the value.. please check it!"
+            }
+        }
+
+        function tsaofcube() {
+            var edge = document.getElementById('edge');
+            var a = edge.value
+            if (a) {
+                ans.innerHTML = "TSA of the cube is " + 6 * a * a + " sq.units";
+            } else {
+                validity.innerHTML = "You've not entered the value.. please check it!"
+            }
+        }
+
+        //**************************CUBOID***************************//
+
+
+        function csaofcuboid() {
+            var length = document.getElementById('length');
+            var breadth = document.getElementById('breadth');
+            var height = document.getElementById('height');
+            var l = length.value;
+            var b = breadth.value;
+            var h = height.value;
+
+            if (l && b && h) {
+                ans.innerHTML = "CSA of the cuboid is " + 2 * (l + b) * h + " sq.units";
+            } else {
+                validity.innerHTML = "You've not entered the value.. please check it!"
+            }
+        }
+
+        function tsaofcuboid() {
+            var length = document.getElementById('length');
+            var breadth = document.getElementById('breadth');
+            var height = document.getElementById('height');
+            var l = length.value;
+            var b = breadth.value;
+            var h = height.value;
+
+            if (l && b && h) {
+                ans.innerHTML = "TSA of the cuboid is " + 2 * (l * b + b * h + l * h) + " sq.units";
+            } else {
+                validity.innerHTML = "You've not entered the value.. please check it!"
+            }
+        }
+
+        //**************************SPHERE***************************//
+
+        function saofsphere() {
+            var radius = document.getElementById('radius');
+            var r = radius.value;
+            var pie = 3.14 || 22 / 7;
+
+            if (r) {
+                ans.innerHTML = "SA of the sphere is " + 2 * pie * r * r + " sq.units";
+            } else {
+                validity.innerHTML = "You've not entered the value.. please check it!"
+            }
+        }
+
+    </script>
+</body>
+
+</html>
